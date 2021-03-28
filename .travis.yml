@@ -11,8 +11,8 @@ before_install:
 
 install:
     - pip install torch
+    - pip install codecov==2.0.15
     - pip install pytest-cov==2.7.1
 
 script:
      - pytest --cov=investpy tests/
-
