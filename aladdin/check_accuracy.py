@@ -5,8 +5,31 @@ def check_accuracy(
     loader, model, input_shape=None, toggle_eval=True, print_accuracy=True
 ):
     """
-    Check accuracy of model on data from loader
+    Check accuracy of a PyTorch model on a dataloader. It assumes the input
+    of the data input shape and will resize if you specify a input_shape.
+
+
+    Parameters
+    ----------
+    loader : DataLoader Class
+        Loader of the data you want to check the accuracy on
+    model : PyTorch Model
+        Trained model
+    input_shape : list (default None)
+        The shape of one example (not including batch), that it should reshape to,
+        if left to default argument None it won't reshape.
+    toggle_eval : boolean (default True)
+        If the model should be toggled to eval mode before evaluation, will return
+        to train mode after checking accuracy.
+    print_accuracy : boolean (default True)
+        If it should also print the accuracy
+
+    Returns
+    -------
+    float
+        Accuracy of the model
     """
+
     if toggle_eval:
         model.eval()
     device = next(model.parameters()).device
