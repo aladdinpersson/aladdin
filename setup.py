@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
-  name='dl_utils',         # How you named your package folder (MyLib)
+  name='aladdin',         # How you named your package folder (MyLib)
   version='0.0.1',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description='Useful deep learning functions',   # Give a short description about your library
