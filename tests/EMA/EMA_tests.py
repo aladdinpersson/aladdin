@@ -9,10 +9,9 @@ import numpy as np
 sys.path.append("aladdin/")
 # If run from local:
 # sys.path.append('../../ML/algorithms/linearregression')
-from check_accuracy import check_accuracy
+from EMA import EMA
 
-
-class TestCheckAccuracy(unittest.TestCase):
+class TestEMA(unittest.TestCase):
     def setUp(self):
         pass
 
