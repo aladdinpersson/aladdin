@@ -1,0 +1,17 @@
+language: python
+
+# Default Python version
+python: 3.8
+
+# Install ruby to get gem command
+before_install:
+  - sudo apt-add-repository -y ppa:brightbox/ruby-ng
+  - sudo apt-get -y update
+  - sudo apt-get -y install ruby-full
+
+install:
+    - pip install torch
+
+script:
+     - pytest --cov=investpy tests/
+
